@@ -687,59 +687,79 @@ li {
   flex-wrap: wrap;
   align-items: center;
 }
+
 .header-area .menu-wrapper .logo {
   position: absolute;
-  z-index: 2;
+  z-index: 2; /* This will be overridden for mobile */
   top: 0;
   left: 0;
 }
+
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .header-area .menu-wrapper .logo img {
     width: 165px;
   }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-area .menu-wrapper .logo img {
     width: 148px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area .menu-wrapper .logo img {
     width: 120px;
   }
 }
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .header-area .menu-wrapper .logo img {
     width: 100px;
   }
 }
+
 @media (max-width: 575px) {
+  .header-area .menu-wrapper .logo {
+    z-index: 9999; /* Ensure the logo is on top of all other elements */
+  }
+
   .header-area .menu-wrapper .logo img {
     width: 100px;
   }
 }
+
 .header-area .menu-wrapper .logo2 {
   position: absolute;
-  z-index: 2;
+  z-index: 2; /* This will be overridden for mobile */
   top: 10px;
   left: 15px;
   display: none;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area .menu-wrapper .logo2 img {
     width: 53px;
   }
 }
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .header-area .menu-wrapper .logo2 img {
     width: 53px;
   }
 }
+
 @media (max-width: 575px) {
+  .header-area .menu-wrapper .logo2 {
+    z-index: 9999; /* Ensure the secondary logo is also on top of all other elements */
+  }
+
   .header-area .menu-wrapper .logo2 img {
     width: 53px;
   }
 }
+
+
 .header-area .menu-wrapper .main-menu ul li {
   display: inline-block;
   position: relative;
